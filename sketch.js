@@ -21,9 +21,12 @@ function setup() {
   let canvas = createCanvas(640, 520);
   canvas.parent('app');
 
-  video = createCapture(VIDEO);
+  video = createCapture(VIDEO, videoReady);
+  video.size(640, 480);
   video.hide();
+}
 
+function videoReady() {
   classifyVideo();
 }
 
