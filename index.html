@@ -39,18 +39,53 @@
                 <p class="group">
                     What lessons from 'Unmasking AI' are resonant for you as you complete this assignment?
                 </p>
-                <p>Template
+                <p>Our Teachable Machines project trained a computer vision model to classify four utensils — spoon, fork, knife, and chopstick — using 400 images we collected ourselves. Read our write-up below, watch the video demo, and try the live model at the bottom of the page.
                 </p>
             </section>
-            <div id="app">
-                <script src="sketch.js"></script>
-                <!-- </div>
-            <div class="video-container"> -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/xXkOtlu6lUY?si=0OQSKdkbleYSAPSA"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+
+            <h2 class="section-title">Introduction and Project Overview</h2>
+            <section class="resource-category">
+                <p>The goal of our project was to introduce ourselves to the basics of AI by creating our own image classification model. To achieve this, we utilized Google's Teachable Machine software which we learned in the class to create a computer vision model that was capable of identifying images of different utensils. However, having only ideal images of the four utensils wouldn't have been enough for our machine learning algorithm. It required a substantial amount of data that includes many variations of the different geometries and shapes of each utensil. For this project, we were required to create all of our own images instead of relying on pre-existing web-scraped images or data, and we were not allowed to create any synthetic images. We created a total of 400 images where there were 100 of each of the four different utensils. The raw data for this post can be found <a href="https://github.com/arnav0red/LIS_500_Teachable_Machines/tree/main/data">here</a>. We drew from our own "worldview", the data we collected ourselves to gain insight into how machine learning models learn, make predictions, and fail when the training data is not up to the task of handling real-world complexity.</p>
+            </section>
+
+            <h2 class="section-title">The Process and the Discovery of Limitations</h2>
+            <section class="resource-category">
+                <p>All in all, I had to go out and manually collect about 400 images of a spoon, fork, knife, and chopstick to use as training data. Most of the images are of the objects simply being held up in front of a plain background. In the video demo of the first version of the model in action, you can see it does a fantastic job identifying a spoon, fork, or chopstick being held up in front of the camera, just like it saw in the training images.</p>
+                <p>After a few minutes of testing, I realized that the model wasn't generalizing too well to new situations. When I put the things on my desk (it's made of wood, as opposed to the white background in the training data) it worked much more poorly. It was beeping loudly and saying knife/chopstick with high uncertainty and sometimes switching suddenly. Looking at the logged data, I realized that it wasn't really recognizing the shapes of the utensils at all, but rather was recognizing them in that one particular scene. The lack of diversity in the training dataset resulted in a model that fits our testing room perfectly but fails to generalize to real-world backgrounds, different lighting conditions, and multiple viewing angles.</p>
+            </section>
+
+            <h2 class="section-title">Resonance with Joy Buolamwini's 'Unmasking AI'</h2>
+            <section class="resource-category">
+                <p>This book focuses on how users experience "algorithmic failure," i.e., the situations in which machine learning systems misfire and cause problems for individuals. The author, Joy Buolamwini, describes her own experience of trying to get a computer to recognize her face, exposing the biased programming in several widely used automatic facial recognition algorithms. Before reading Unmasking AI, I had encountered some of these issues in my programming class. Unmasking AI focused, however, on how the "coded gaze" of developers who create ML systems—their conscious and unconscious biases, interests, and blind spots as to the nature of the world around them—affects how such systems perform for individual users.</p>
+                <p>The algorithms aren't technically broken. They are functioning exactly as they were designed. The disaster is in how people misunderstand how these algorithms are functioning. In the work that Buolamwini did on facial recognition algorithms, the datasets from which the models were drawing were predominantly lighter-skinned faces and predominantly male faces. There were virtually no Black women in the datasets Buolamwini tested. Algorithms only know the world that their developers have assembled for them.</p>
+                <p>While reading Buolamwini's book, I realized her findings perfectly mirrored our Teachable Machine project. As Buolamwini notes, several of the same errors she documents were present in our work. After initially training our model in a very controlled environment and achieving high accuracy, adding a simple wooden table to the scene caused the model to fail. Algorithms are not objective. The model doesn't understand reality or truth. All it can understand are the patterns in the data it has seen. Our model does not have any understanding of what the concept of a "knife" actually is; it is simply learning to recognize images of knives held up against a plain wall.</p>
+            </section>
+
+            <h2 class="section-title">The Myth of Neutral Data and Future Iterations</h2>
+            <section class="resource-category">
+                <p>I also learned that there is no such thing as truly neutral data. Because we couldn't download data from an online repository, we had to take all 400 images ourselves. This made me realize that each photo is a choice, and each choice has bias in it. I chose to include images with bright light and dim light. We chose to include images of a specific metal spoon and a specific wooden chopstick. If someone tried to test the model using a plastic soup spoon or a brightly colored children's fork, it would fail. These realities were simply not captured in our initial data collection process.</p>
+                <p>For future versions, I think it would be best to start implementing ethical and effective AI engineering at the data collection phase. To democratize the dataset, I will be adding images of utensils made of different materials from multiple angles and placed in front of variously textured backgrounds. This will keep the model focused on the utensils and not distracted by the background.</p>
+                <p>In Unmasking AI, Buolamwini exposes how developers fail to identify dark-skinned women and incorrectly attribute this failure to the math, rather than the lack of social context and diversity in their datasets. By examining our own small dataset of images, our team uncovered how the data itself is the problem and how developers have significant environmental blind spots that are magnified by the growing powers of these algorithms. The project proved that in order to create machines that accurately reflect and serve our world, we must first teach them with data that is as diverse and complex as the world we inhabit.</p>
+            </section>
+
+            <h2 class="section-title">Video Demo</h2>
+            <section class="resource-category">
+                <p>Watch the model in action below. In this clip, the classifier correctly identifies a spoon, fork, knife, and chopstick when held in front of the camera against the same kind of plain background it was trained on — and you can see it begin to struggle when the scene changes.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/xXkOtlu6lUY?si=0OQSKdkbleYSAPSA"
+                        title="Teachable Machines utensil classifier demo" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <h2 class="section-title">Try the Live Model</h2>
+            <section class="resource-category">
+                <p>The live classifier below runs in your browser using your webcam. Hold a spoon, fork, knife, or chopstick in front of your camera and watch the model's prediction update in real time. Allow camera access when prompted.</p>
+                <div id="app">
+                    <script src="sketch.js"></script>
+                </div>
+            </section>
 
         </div>
     </main>
