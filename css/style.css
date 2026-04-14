@@ -559,3 +559,9 @@ main p {
         grid-template-columns: 1fr;
     }
 }
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

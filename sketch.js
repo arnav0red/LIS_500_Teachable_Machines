@@ -18,11 +18,12 @@ function preload() {
 
 
 function setup() {
-  createCanvas(640, 520);
-  // Create the video
+  let canvas = createCanvas(640, 520);
+  canvas.parent('app');
+
   video = createCapture(VIDEO);
   video.hide();
-  // STEP 2: Start classifying
+
   classifyVideo();
 }
 
