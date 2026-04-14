@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		    <meta charset="UTF-8">
-		        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-			    <title>LIS 500 Teachable Machines</title>
-			        <link rel="stylesheet" href="styles.css">
-	</head>
-	<body>
-			            <h1>Template</h1>
-	</body>
+
+<head>
+    <!-- Character encoding and responsive viewport for mobile devices -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIS 500: Code and Power</title>
+    <!-- External stylesheet — all styling is CSS-driven, no inline styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header placeholder — populated dynamically from header.html -->
+    <div id="header"></div>
+    <script>
+        // Fetch shared header component and inject it into the page
+        fetch("header.html")
+            .then(res => res.text())
+            .then(html =>
+            {
+                document.getElementById("header").innerHTML = html;
+            });
+    </script>
+
+    <!-- Main content area wrapped in page-wrapper div for consistent margins -->
+    <main>
+        <div class="page-wrapper">
+
+            <!-- Welcome section introducing the course and group members -->
+            <section class="welcome-panel">
+                <p class="group">
+                    Test
+                </p>
+                <p>Template
+                </p>
+            </section>
+
+
+        </div>
+    </main>
+</body>
+
 </html>
