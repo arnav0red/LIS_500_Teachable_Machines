@@ -12,50 +12,66 @@ let classifier;
 let modelURL = 'https://teachablemachine.withgoogle.com/models/xD8978hCe/';
 
 // STEP 1: Load the model!
-function preload() {
+function preload()
+{
   classifier = ml5.imageClassifier(modelURL + 'model.json');
 }
 
 
-function setup() {
+function setup()
+{
   let canvas = createCanvas(640, 520);
   canvas.parent('app');
-
-  video = createCapture(VIDEO, videoReady);
-  video.size(640, 480);
-  video.hide();
+  background(0);
 }
 
-function videoReady() {
+function videoReady()
+{
   classifyVideo();
 }
 
 // STEP 2 classify the videeo!
-function classifyVideo() {
+function classifyVideo()
+{
   classifier.classify(video, gotResults);
 }
 
-function draw() {
+function draw()
+{
   background(0);
 
-  // Draw the video
-  image(video, 0, 0);
+  if (video)
+  {
 
-  // STEP 4: Draw the label
-  textSize(32);
-  textAlign(CENTER, CENTER);
-  fill(255);
-  text(label, width / 2, height - 16);
+    // Draw the video
+    image(video, 0, 0);
+
+    // STEP 4: Draw the label
+    textSize(32);
+    textAlign(CENTER, CENTER);
+    fill(255);
+    text(label, width / 2, height - 16);
+  }
+
 }
 
 // STEP 3: Get the classification!
-function gotResults(error, results) {
+function gotResults(error, results)
+{
   // Something went wrong!
-  if (error) {
+  if (error)
+  {
     console.error(error);
     return;
   }
   // Store the label and classify again!
   label = results[0].label;
+  classifyVideo();
+}
+
+function startModel()
+{
+  video = createCapture(VIDEO);
+  video.hide();
   classifyVideo();
 }

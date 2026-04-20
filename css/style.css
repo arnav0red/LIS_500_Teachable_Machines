@@ -4,14 +4,16 @@
 
 /* ===== Global Reset & Base Styles ===== */
 /* Box-sizing border-box makes padding/margin calculations easier */
-* {
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* Body uses warm off-white background to distinguish from default white template look */
-body {
+body
+{
     font-family: 'Lato', sans-serif;
     background-color: #f5f0eb;
     color: #2c2c2c;
@@ -20,7 +22,8 @@ body {
 
 /* ===== Header & Site Title ===== */
 /* Dark navy gradient header gives the site its own identity, distinct from the Canvas site */
-header {
+header
+{
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     color: #ffffff;
     padding: 2rem 1.5rem 1rem;
@@ -29,13 +32,15 @@ header {
 }
 
 /* Title block centers the site name and subtitle */
-.title-block {
+.title-block
+{
     text-align: center;
     margin-bottom: 1rem;
 }
 
 /* Main heading uses Playfair Display serif font for an academic, editorial feel */
-.title-block h1 {
+.title-block h1
+{
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 800;
@@ -48,7 +53,8 @@ header {
 }
 
 /* Subtitle styled lighter and smaller for visual hierarchy */
-.title-block h2 {
+.title-block h2
+{
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
     font-weight: 300;
@@ -58,12 +64,14 @@ header {
 }
 
 /* ===== Navigation Bar ===== */
-nav {
+nav
+{
     margin-top: 0.75rem;
 }
 
 /* Flex layout for navigation links, wraps on small screens */
-.action-bar {
+.action-bar
+{
     display: flex;
     gap: 0.75rem;
     justify-content: center;
@@ -72,7 +80,8 @@ nav {
 }
 
 /* Navigation link buttons with red background */
-.action-bar a {
+.action-bar a
+{
     background-color: #c0392b;
     color: #ffffff;
     padding: 0.55rem 1.3rem;
@@ -86,7 +95,8 @@ nav {
 }
 
 /* Hover effect lifts the button slightly */
-.action-bar a:hover {
+.action-bar a:hover
+{
     background-color: #e74c3c;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -94,7 +104,8 @@ nav {
 
 /* Active page link uses WHITE background with DARK text for maximum contrast */
 /* This addresses accessibility feedback about red-on-red being hard for colorblind users */
-.action-bar a.active {
+.action-bar a.active
+{
     background-color: #ffffff;
     color: #1a1a2e;
     font-weight: 700;
@@ -104,7 +115,8 @@ nav {
 /* ===== Page Content Wrapper ===== */
 /* This div constrains all page content to a readable width with consistent margins */
 /* Addresses professor feedback about text going edge-to-edge */
-.page-wrapper {
+.page-wrapper
+{
     max-width: 960px;
     margin: 2rem auto;
     padding: 0 2rem;
@@ -112,37 +124,45 @@ nav {
 
 /* ===== Typography ===== */
 /* All headings use Playfair Display for consistency across pages */
-h1, h2, h3 {
+h1,
+h2,
+h3
+{
     font-family: 'Playfair Display', serif;
     line-height: 1.3;
 }
 
-main h1 {
+main h1
+{
     font-size: 2rem;
     color: #1a1a2e;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
 }
 
-main h2 {
+main h2
+{
     font-size: 1.5rem;
     color: #1a1a2e;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
 }
 
-main h3 {
+main h3
+{
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
-main p {
+main p
+{
     margin-bottom: 1.2rem;
     font-size: 1.05rem;
 }
 
 /* Section title used for centered page headings */
-.section-title {
+.section-title
+{
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
@@ -153,7 +173,8 @@ main p {
 
 /* ===== Home Page Banner ===== */
 /* Banner image is constrained and rounded for a polished look */
-.banner {
+.banner
+{
     display: block;
     margin: 0 auto 2rem;
     max-width: 100%;
@@ -164,7 +185,8 @@ main p {
 
 /* ===== Welcome Panel (Home Page) ===== */
 /* Card-style panel with a red left border accent */
-.welcome-panel {
+.welcome-panel
+{
     background-color: #ffffff;
     padding: 2rem;
     border-radius: 10px;
@@ -173,13 +195,15 @@ main p {
     margin-bottom: 2.5rem;
 }
 
-.welcome-panel p {
+.welcome-panel p
+{
     font-size: 1.15rem;
     line-height: 1.7;
     color: #333;
 }
 
-.welcome-panel .group {
+.welcome-panel .group
+{
     font-style: italic;
     color: #555;
     margin-bottom: 1rem;
@@ -188,7 +212,8 @@ main p {
 
 /* ===== Page Preview Cards (Home Page) ===== */
 /* Grid of clickable cards that preview other sections of the site */
-.preview-grid {
+.preview-grid
+{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
@@ -196,7 +221,8 @@ main p {
 }
 
 /* Each preview card is a clickable link styled as a card */
-.preview-card {
+.preview-card
+{
     background-color: #ffffff;
     border-radius: 10px;
     padding: 1.75rem;
@@ -209,19 +235,22 @@ main p {
 }
 
 /* Card hover effect — lifts up to show interactivity */
-.preview-card:hover {
+.preview-card:hover
+{
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.preview-card h3 {
+.preview-card h3
+{
     font-family: 'Playfair Display', serif;
     color: #1a1a2e;
     margin-bottom: 0.5rem;
     font-size: 1.25rem;
 }
 
-.preview-card p {
+.preview-card p
+{
     color: #555;
     font-size: 0.95rem;
     line-height: 1.5;
@@ -230,7 +259,8 @@ main p {
 
 /* ===== About Page ===== */
 /* Profile container uses flexbox for side-by-side headshot and bio layout */
-.about-container {
+.about-container
+{
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -243,7 +273,8 @@ main p {
 }
 
 /* Circular headshot images with red accent border */
-.about-container .headshot {
+.about-container .headshot
+{
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -253,25 +284,29 @@ main p {
 }
 
 /* Bio text takes up remaining space */
-.about-text {
+.about-text
+{
     flex: 1;
 }
 
-.about-text h2 {
+.about-text h2
+{
     font-family: 'Playfair Display', serif;
     margin-top: 0;
     font-size: 1.8rem;
     color: #c0392b;
 }
 
-.about-text p {
+.about-text p
+{
     font-size: 1.05rem;
     line-height: 1.7;
     color: #333;
 }
 
 /* Dashed divider line between team member profiles — addresses peer feedback about spacing */
-.about-divider {
+.about-divider
+{
     border: none;
     border-top: 2px dashed #d4c5b9;
     margin: 2.5rem auto;
@@ -280,7 +315,8 @@ main p {
 
 /* ===== Resources Page ===== */
 /* Resources page uses its own wrapper for consistent max-width */
-.resources-page {
+.resources-page
+{
     max-width: 960px;
     margin: 2rem auto;
     padding: 0 2rem;
@@ -288,7 +324,8 @@ main p {
 }
 
 /* Page title for resources page */
-.resources-page h1 {
+.resources-page h1
+{
     font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
@@ -297,7 +334,8 @@ main p {
 }
 
 /* Intro paragraph centered below the title */
-.resources-intro {
+.resources-intro
+{
     text-align: center;
     font-size: 1.1rem;
     color: #555;
@@ -307,7 +345,8 @@ main p {
 }
 
 /* Each resource topic is styled as a white card with red left border */
-.resource-category {
+.resource-category
+{
     background-color: #ffffff;
     border-radius: 10px;
     padding: 2rem;
@@ -316,7 +355,8 @@ main p {
     border-left: 5px solid #c0392b;
 }
 
-.resource-category h2 {
+.resource-category h2
+{
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     color: #1a1a2e;
@@ -326,25 +366,29 @@ main p {
     margin-top: 0;
 }
 
-.resource-category p {
+.resource-category p
+{
     line-height: 1.7;
     margin-bottom: 1rem;
 }
 
 /* Links within resource sections use red color and underline */
-.resource-category a {
+.resource-category a
+{
     color: #c0392b;
     font-weight: 600;
     text-decoration: underline;
     transition: color 0.2s ease;
 }
 
-.resource-category a:hover {
+.resource-category a:hover
+{
     color: #e74c3c;
 }
 
 /* Styled button-style link for key resources — uses higher specificity to override .resource-category a */
-.resource-category a.resource-link {
+.resource-category a.resource-link
+{
     display: inline-block;
     background-color: #c0392b;
     color: #ffffff;
@@ -356,14 +400,16 @@ main p {
     transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
-.resource-category a.resource-link:hover {
+.resource-category a.resource-link:hover
+{
     background-color: #e74c3c;
     transform: translateY(-1px);
     color: #ffffff;
 }
 
 /* Responsive video embed container — maintains 16:9 aspect ratio */
-.video-container {
+.video-container
+{
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
@@ -374,7 +420,8 @@ main p {
 }
 
 /* Iframe stretches to fill the responsive container */
-.video-container iframe {
+.video-container iframe
+{
     position: absolute;
     top: 0;
     left: 0;
@@ -385,7 +432,8 @@ main p {
 }
 
 /* Dark call-to-action box for the IAT test — draws attention visually */
-.cta-box {
+.cta-box
+{
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     color: #ffffff;
     padding: 2rem;
@@ -394,21 +442,24 @@ main p {
     margin: 2rem 0;
 }
 
-.cta-box h2 {
+.cta-box h2
+{
     color: #ffffff;
     border-bottom: none;
     font-size: 1.6rem;
     margin-bottom: 0.75rem;
 }
 
-.cta-box p {
+.cta-box p
+{
     color: #d0d0d0;
     font-size: 1.05rem;
     margin-bottom: 1rem;
 }
 
 /* Button link inside the CTA box */
-.cta-box a {
+.cta-box a
+{
     display: inline-block;
     background-color: #c0392b;
     color: #ffffff;
@@ -420,13 +471,15 @@ main p {
     transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
-.cta-box a:hover {
+.cta-box a:hover
+{
     background-color: #e74c3c;
     transform: translateY(-2px);
 }
 
 /* Closing quote/reminder styled as an italic card */
-.resources-closing {
+.resources-closing
+{
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-size: 1.3rem;
@@ -441,7 +494,8 @@ main p {
 
 /* ===== Tech Hero Page ===== */
 /* Each tech hero profile is a white card with centered image and left-aligned text */
-.tech-hero-section {
+.tech-hero-section
+{
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -451,7 +505,8 @@ main p {
 }
 
 /* Tech hero portrait image — full width with rounded corners and red border */
-.tech-hero-section img {
+.tech-hero-section img
+{
     max-width: 100%;
     height: auto;
     border-radius: 10px;
@@ -460,11 +515,13 @@ main p {
 }
 
 /* Text content within each hero section is left-aligned for readability */
-.tech-hero-text {
+.tech-hero-text
+{
     text-align: left;
 }
 
-.tech-hero-text h2 {
+.tech-hero-text h2
+{
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     color: #c0392b;
@@ -472,12 +529,14 @@ main p {
     margin-top: 0;
 }
 
-.tech-hero-text h3 {
+.tech-hero-text h3
+{
     color: #1a1a2e;
     margin-top: 1rem;
 }
 
-.tech-hero-text p {
+.tech-hero-text p
+{
     font-size: 1.05rem;
     line-height: 1.7;
     color: #333;
@@ -485,7 +544,8 @@ main p {
 }
 
 /* Blockquote styling for tech hero quotes — left red border with warm background */
-.tech-hero-quote {
+.tech-hero-quote
+{
     font-family: 'Playfair Display', serif;
     font-style: italic;
     color: #555;
@@ -498,7 +558,8 @@ main p {
 }
 
 /* Resource links listed vertically below each hero profile */
-.tech-hero-links {
+.tech-hero-links
+{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -506,23 +567,27 @@ main p {
     margin-top: 1.5rem;
 }
 
-.tech-hero-links h3 {
+.tech-hero-links h3
+{
     text-align: center;
 }
 
-.tech-hero-links a {
+.tech-hero-links a
+{
     color: #c0392b;
     font-weight: 600;
     text-decoration: underline;
     transition: color 0.2s ease;
 }
 
-.tech-hero-links a:hover {
+.tech-hero-links a:hover
+{
     color: #e74c3c;
 }
 
 /* Red divider line between tech hero profiles */
-.hero-divider {
+.hero-divider
+{
     border: none;
     border-top: 3px solid #c0392b;
     margin: 3rem auto;
@@ -531,38 +596,87 @@ main p {
 
 /* ===== Responsive Design ===== */
 /* Adjustments for tablets and mobile devices */
-@media (max-width: 768px) {
-    .title-block h1 {
+@media (max-width: 768px)
+{
+    .title-block h1
+    {
         font-size: 1.8rem;
     }
 
     /* Stack nav links vertically on small screens */
-    .action-bar {
+    .action-bar
+    {
         flex-direction: column;
         align-items: center;
     }
 
     /* Stack about page layout vertically on small screens */
-    .about-container {
+    .about-container
+    {
         flex-direction: column;
         text-align: center;
     }
 
     /* Reduce side padding on mobile */
     .page-wrapper,
-    .resources-page {
+    .resources-page
+    {
         padding: 0 1rem;
     }
 
     /* Single column grid on mobile */
-    .preview-grid {
+    .preview-grid
+    {
         grid-template-columns: 1fr;
     }
 }
-#app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 300px;
-  margin-top: 1rem;
+
+#app
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    margin-top: 1rem;
+}
+
+/* Centered button matching your site style */
+#startBtn
+{
+    display: block;
+    margin: 0rem auto;
+    /* centers horizontally */
+
+    background-color: #c0392b;
+    /* same red as your theme */
+    color: #ffffff;
+
+    padding: 0.7rem 1.6rem;
+    border: none;
+    border-radius: 6px;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+    transition: background-color 0.25s ease,
+        transform 0.15s ease,
+        box-shadow 0.25s ease;
+}
+
+/* Hover = same interaction style as nav buttons */
+#startBtn:hover
+{
+    background-color: #e74c3c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Active click feedback */
+#startBtn:active
+{
+    transform: translateY(0);
+    box-shadow: none;
 }
